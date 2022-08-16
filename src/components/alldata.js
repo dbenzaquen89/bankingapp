@@ -1,44 +1,40 @@
-import React from "react";
-import {UserContext} from './context'
-import Card from "./context";
-
-function AllData() {
+function AllData(){
   const ctx = React.useContext(UserContext);
-
-  const displayUsers = ctx.users.map((user) => {
-    return (
-      <tr key={user}>
-        <td>{user.name}</td>
-        <td>{user.email}</td>
-        <td>{user.password}</td>
-        <td>{user.balance}</td>
+  const rows = [];
+  let i = 0;
+  for (const row of ctx.users) {
+    rows.push(
+      <tr key={i}>
+        <td>{row.name}</td>
+        <td>{row.email}</td>
+        <td>{row.password}</td>
+        <td>{row.balance}</td>
       </tr>
     );
-  });
+
+    i++;
+  }
 
   return (
-    
-<Card
-     bgcolor="info"
-     length="auto"
-      txtcolor="text-light"
-    header="All User's Top Secret Data"
-      body={
-        <table class="table table-dark ">
-          <thead> 
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Password</th>
-              <th>Balance</th>
-            </tr>
-            </thead>
-          <tbody>{displayUsers}</tbody>
-        </table>
-      }
-    />
+
+    <>
+
+        <table className="table table-striped">
+                <thead>
+                    <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {rows}
+                    
+                </tbody>
+            </table>
 
 
-  );
+    </>
+  )
 }
-export default AllData
