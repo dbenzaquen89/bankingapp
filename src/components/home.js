@@ -1,5 +1,3 @@
-import React from 'react';
-import Card from './context';
 function Home(){
   return (
 
@@ -9,17 +7,13 @@ function Home(){
       header="Trust Us with All Your Financial Needs...NOT"
       title="Welcome to Easiest Bank to Hack"
       text="Explore the site using the Navigation Bar."
-      body={(<>
-      <img 
-        src="bank.png" 
-        className="img-fluid" 
-        alt="image of bank" />
-        <br/>
+      body={(<img src="bank.png" className="img-fluid" alt="image of bank"
+     
+      />
       
-      </>)}
       
+      )}
       
     />    
   );  
 }
-export default Home;
