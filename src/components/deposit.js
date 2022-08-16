@@ -1,19 +1,11 @@
-import React from 'react';
-import Card from './context';
-import { useState } from 'react';
-import { UserContext }from './context';
-
-
-
 function Deposit() {
   const [deposit, setDeposit] = React.useState("");
   const [balance, setBalance] = React.useState(0);
   const [show, setShow] = React.useState(true);
   const [status, setStatus] = React.useState("");
   const ctx = React.useContext(UserContext);
-  let userBalance= ctx.users[ctx.users.length-1].balance;
-  let userName= ctx.users[ctx.users.length -1].name;
-
+  let userBalance = ctx.users[ctx.users.length - 1].balance;
+  let userName = ctx.users[ctx.users.length - 1].name;
 
   function validate(number) {
     if (isNaN(number) || number < 0) {
