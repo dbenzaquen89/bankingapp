@@ -1,19 +1,12 @@
-import React from 'react'
-import Card from './context'
-import { UserContext } from './context'
-import { useState } from 'react'
-
-
-
 function CreateAccount(){
-  const [show, setShow]         = useState(true);
-  const [status, setStatus]     = useState('');
-  const [name, setName]         = useState('');
-  const [email, setEmail]       = useState('');
-  const [password, setPassword] = useState('');
+  const [show, setShow]         = React.useState(true);
+  const [status, setStatus]     = React.useState('');
+  const [name, setName]         = React.useState('');
+  const [email, setEmail]       = React.useState('');
+  const [password, setPassword] = React.useState('');
   
   const ctx = React.useContext(UserContext);  
-  console.log(JSON.stringify(ctx))
+  
   function validate(field, label){
       if (!field) {
         setStatus('Please enter a valid ${label}');
