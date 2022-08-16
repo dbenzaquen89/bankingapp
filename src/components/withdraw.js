@@ -1,8 +1,3 @@
-import React from 'react';
-import Card from './context';
-import { UserContext } from './context';
-import { useContext} from 'react';
-import { useState} from 'react';
 
 
 function Withdraw() {
