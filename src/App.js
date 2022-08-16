@@ -29,7 +29,7 @@ function App() {
          <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path='home' element={ <Home /> } />
-            <Route path='withdraw' element={ <Withdraw /> } />
+              <Route path='withdraw' element={ <Withdraw /> } />
             <Route path='deposit' element={ <Deposit /> } />
             <Route path='alldata' element={ <AllData /> } />
             <Route path='createaccount' element={ <CreateAccount /> } />
